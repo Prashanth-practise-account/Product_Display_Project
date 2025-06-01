@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">  <!--  theam leaf engine -->
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+			<h3>Login</h3>
+			
+			<form th:action="@{/login}" method="post">
+		<center style="color:red"><div th:if="${message!=null}">[[${message}]]</div></center>	
+				<div>
+					<label for="email">User Name</label>
+					<input type="text" name="name" id="email" required>
+				</div>
+				<div>
+					<label for="password">Password</label>
+					<input type="password" name="pass" id="password" required>
+				</div>
+					<div>
+					<button type="submit">Login</button>
+				</div>
+					<div>
+					<small><a href="#">Forget Password?</a></small>
+				</div>
+				
+			</form>
+</body>
+</html>
