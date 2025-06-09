@@ -31,7 +31,7 @@ jobs:
            password: Prashanth@123
 
       - name: Build Docker image
-        run: docker build -t 9880135088/myapp:latest .
+        run: docker build -t 9880135088/product_display_project:latest .
 
       - name: Push Docker image
-        run: docker push 9880135088/myapp:latest
+        run: docker push 9880135088/product_display_project:latest
