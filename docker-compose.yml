@@ -1,22 +1,22 @@
-version: '3.8'
+  version: '3.8'
 
-services:
-  app:
-    build: .
-    ports:
-      - "8080:8080"
-    depends_on:
-      - db
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/Product_crud
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: 123456pra
+  services:
+    app:
+      build: .
+      ports:
+        - "8080:8080"
+      depends_on:
+        - db
+      environment:
+        SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/Product_crud
+        SPRING_DATASOURCE_USERNAME: root
+        SPRING_DATASOURCE_PASSWORD: 123456pra
 
-  db:
-    image: mysql:8
-    restart: always
-    environment:
-      MYSQL_DATABASE: Product_crud
-      MYSQL_ROOT_PASSWORD: 123456pra
-    ports:
-      - "3306:3306"
+    db:
+      image: mysql:8
+      restart: always
+      environment:
+        MYSQL_DATABASE: Product_crud
+        MYSQL_ROOT_PASSWORD: 123456pra
+      ports:
+        - "3306:3306"
